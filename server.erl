@@ -1,3 +1,4 @@
+% Jaime Rodriguez (jr1713) and Ignacio Navarro (in714)
 
 %%% distributed algorithms, n.dulay 27 feb 17
 %%% coursework 2, paxos made moderately complex

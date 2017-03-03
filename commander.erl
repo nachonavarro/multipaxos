@@ -1,3 +1,4 @@
+% Jaime Rodriguez (jr1713) and Ignacio Navarro (in714)
 -module(commander).
 -export([start/4]).
 
