@@ -1,0 +1,126 @@
+% Jaime Rodriguez (jr1713) and Ignacio Navarro (in714)
+
+If we have a very high number of clients and servers, our consensus algorithm fails, probably because our solution
+is non optimal in terms of data structures and overall complexity. Hence, it seems that there isn't enough time to
+complete all the requests (even though we increase how long the database waits for) and the replicas disagree.
+
+
+The configuration is the following:
+
+% Database wait = End_after + 10000
+% N_servers  = 15,
+% N_clients  = 15,
+% N_accounts = 5,
+% Max_amount = 1000,   
+
+% End_after  = 1000,   %  Milli-seconds for Simulation
+
+
+The output was as follows:
+
+erlc -o ebin database.erl
+erl -noshell -pa ebin -setcookie pass -run system start
+Transactions 899
+1 -4038 <0.69.0>
+2 -6367 <0.69.0>
+3 2692 <0.69.0>
+4 1124 <0.69.0>
+5 6589 <0.69.0>
+
+Transactions 899
+1 -4038 <0.73.0>
+2 -6367 <0.73.0>
+3 2692 <0.73.0>
+4 1124 <0.73.0>
+5 6589 <0.73.0>
+
+Transactions 899
+1 -4038 <0.89.0>
+2 -6367 <0.89.0>
+3 2692 <0.89.0>
+4 1124 <0.89.0>
+5 6589 <0.89.0>
+
+Transactions 899
+1 -4038 <0.85.0>
+2 -6367 <0.85.0>
+3 2692 <0.85.0>
+4 1124 <0.85.0>
+5 6589 <0.85.0>
+
+Transactions 894
+1 -4038 <0.105.0>
+2 -7640 <0.105.0>
+3 3232 <0.105.0>
+4 603 <0.105.0>
+5 7843 <0.105.0>
+
+Transactions 899
+1 -4038 <0.117.0>
+2 -6367 <0.117.0>
+3 2692 <0.117.0>
+4 1124 <0.117.0>
+5 6589 <0.117.0>
+
+Transactions 894
+1 -4038 <0.101.0>
+2 -7640 <0.101.0>
+3 3232 <0.101.0>
+4 603 <0.101.0>
+5 7843 <0.101.0>
+
+Transactions 899
+1 -4038 <0.113.0>
+2 -6367 <0.113.0>
+3 2692 <0.113.0>
+4 1124 <0.113.0>
+5 6589 <0.113.0>
+
+Transactions 899
+1 -4038 <0.97.0>
+2 -6367 <0.97.0>
+3 2692 <0.97.0>
+4 1124 <0.97.0>
+5 6589 <0.97.0>
+
+Transactions 899
+1 -4038 <0.109.0>
+2 -6367 <0.109.0>
+3 2692 <0.109.0>
+4 1124 <0.109.0>
+5 6589 <0.109.0>
+
+Transactions 899
+1 -4038 <0.125.0>
+2 -6367 <0.125.0>
+3 2692 <0.125.0>
+4 1124 <0.125.0>
+5 6589 <0.125.0>
+
+Transactions 883
+1 -3727 <0.77.0>
+2 -7763 <0.77.0>
+3 5415 <0.77.0>
+4 246 <0.77.0>
+5 5829 <0.77.0>
+
+Transactions 899
+1 -4038 <0.93.0>
+2 -6367 <0.93.0>
+3 2692 <0.93.0>
+4 1124 <0.93.0>
+5 6589 <0.93.0>
+
+Transactions 899
+1 -4038 <0.81.0>
+2 -6367 <0.81.0>
+3 2692 <0.81.0>
+4 1124 <0.81.0>
+5 6589 <0.81.0>
+
+Transactions 899
+1 -4038 <0.121.0>
+2 -6367 <0.121.0>
+3 2692 <0.121.0>
+4 1124 <0.121.0>
+5 6589 <0.121.0>

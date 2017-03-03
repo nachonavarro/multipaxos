@@ -8,11 +8,11 @@
 
 start() ->
   N_servers  = 5,
-  N_clients  = 3,
-  N_accounts = 10,
-  Max_amount = 1000,   
+  N_clients  = 10,
+  N_accounts = 15,
+  Max_amount = 2000,   
 
-  End_after  = 1000,   %  Milli-seconds for Simulation
+  End_after  = 3000,   %  Milli-seconds for Simulation
 
   _Servers = [ spawn(server, start, [self(), N_accounts, End_after]) 
     || _ <- lists:seq(1, N_servers) ],
