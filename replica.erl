@@ -9,8 +9,6 @@
 start(Database) ->
   receive
     {bind, Leaders} -> 
-      % TODO:
-      % State = todo
       {SlotIn, SlotOut} = {1, 1},
       {Requests, Proposals, Decisions} = {sets:new(), sets:new(), sets:new()},
       next(SlotIn, SlotOut, Requests, Proposals, Decisions, Leaders, Database)

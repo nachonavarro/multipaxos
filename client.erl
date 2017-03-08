@@ -16,7 +16,7 @@ next(Replicas, N_accounts, Max_amount, Cid) ->
   % Increase the timeout in database significantly to ensure 
   % all updates are done.
   % [ erlang:yield() || _N <- lists:seq(1, 100) ],
-  timer:sleep(1), 
+  timer:sleep(10), 
 
   Account1 = rand:uniform(N_accounts),
   Account2 = rand:uniform(N_accounts),

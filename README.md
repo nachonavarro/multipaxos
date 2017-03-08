@@ -5,4 +5,14 @@
 make run
 ```
 
+The parameters that can be modified are:
+
+N_servers, N_clients, N_accounts, Max_amount, End_after in system.erl
+
+End_after + time in database.erl
+
+timer:sleep(time) in client.erl
+
+
+
 
